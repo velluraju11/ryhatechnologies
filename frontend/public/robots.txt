@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+# Sitemap is usually located at /sitemap.xml
+Sitemap: https://ryha.in/sitemap.xml

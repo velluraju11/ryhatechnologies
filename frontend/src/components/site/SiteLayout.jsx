@@ -99,10 +99,15 @@ function TopNav() {
       }
       style={{ backdropFilter: "blur(16px)" }}
     >
-      <div className="mx-auto flex h-[76px] max-w-6xl items-center justify-between px-4 md:px-6">
-        <Link to="/" className="group flex items-center gap-3">
-          <span className="relative grid h-9 w-9 place-items-center rounded-lg border border-white/10 bg-white/5 shadow-[0_0_0_1px_rgba(255,255,255,0.02)] transition-transform duration-300 group-hover:-translate-y-[1px]">
-            <Shield className="h-[18px] w-[18px] text-white/90" />
+      <div className="w-full flex h-[76px] items-center justify-between pl-4 pr-4 md:pl-10 md:pr-8 lg:pl-12 lg:pr-12">
+        <Link to="/" aria-label="Ryha Technologies Home" className="group flex items-center gap-3 -ml-3 md:-ml-6 lg:-ml-8">
+          {/* Logo with Frame */}
+          <span className="relative grid h-9 w-9 place-items-center rounded-lg border border-white/20 bg-white/10 shadow-[0_0_0_1px_rgba(255,255,255,0.05)] transition-transform duration-300 group-hover:-translate-y-[1px]">
+            <img
+              src="/logo.png"
+              alt="Ryha Technologies"
+              className="h-5 w-5 object-contain opacity-90"
+            />
           </span>
           <span className="leading-none">
             <span className="block ryha-logo">Ryha</span>
@@ -131,14 +136,16 @@ function TopNav() {
             href="https://blog.ryha.in"
             target="_blank"
             rel="noreferrer"
+            aria-label="Ryha Technologies Blog"
+            title="Read our latest updates on the Ryha Blog"
             className={navLinkBase + " inline-flex items-center gap-1.5"}
           >
-            Blog <ExternalLink className="h-4 w-4" />
+            Blog <ExternalLink className="h-4 w-4" role="img" aria-label="External Link" alt="External Link" />
           </a>
 
           <Button asChild className="ryha-btn-primary">
-            <Link to="/#early-access">
-              Join Early Access <ArrowRight className="h-4 w-4" />
+            <Link to="/#early-access" aria-label="Join Early Access List" title="Join the Early Access List">
+              Join Early Access <ArrowRight className="h-4 w-4" role="img" aria-label="Arrow Right" alt="Arrow Right" />
             </Link>
           </Button>
         </nav>
@@ -175,17 +182,19 @@ function TopNav() {
                     href="https://blog.ryha.in"
                     target="_blank"
                     rel="noreferrer"
+                    aria-label="Ryha Technologies Blog"
+                    title="Read our latest updates on the Ryha Blog"
                     className="text-base text-white/75 inline-flex items-center gap-2"
                   >
-                    Blog <ExternalLink className="h-4 w-4" />
+                    Blog <ExternalLink className="h-4 w-4" role="img" aria-label="External Link" alt="External Link" />
                   </a>
                 </div>
 
                 <Separator className="bg-white/10" />
 
                 <Button asChild className="ryha-btn-primary w-full">
-                  <Link to="/#early-access">
-                    Join Early Access <ArrowRight className="h-4 w-4" />
+                  <Link to="/#early-access" aria-label="Join Early Access List" title="Join the Early Access List">
+                    Join Early Access <ArrowRight className="h-4 w-4" role="img" aria-label="Arrow Right" alt="Arrow Right" />
                   </Link>
                 </Button>
               </div>
@@ -238,6 +247,7 @@ export default function SiteLayout({ children }) {
       </main>
 
       <Footer />
+
       <Toaster richColors={false} />
     </div>
   );

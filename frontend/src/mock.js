@@ -73,7 +73,7 @@ export function getEarlyAccessList() {
   return readArray(LS_KEYS.earlyAccess);
 }
 
-export function submitEarlyAccess({ name, email, interest }) {
+export async function submitEarlyAccess({ name, email, interest }) {
   const cleanedEmail = String(email || "").trim().toLowerCase();
   const cleanedName = String(name || "").trim();
   const cleanedInterest = String(interest || "").trim();
@@ -82,31 +82,47 @@ export function submitEarlyAccess({ name, email, interest }) {
     return { ok: false, error: "Please enter a valid email address." };
   }
 
-  const list = getEarlyAccessList();
-  const already = list.find((x) => x.email === cleanedEmail);
-  if (already) {
-    return { ok: true, already: true, item: already, metrics: getMetrics() };
+  // Try backend first; fall back to local mock if network or server not available
+  try {
+    const res = await fetch('/api/early-access', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: cleanedName, email: cleanedEmail, interest: cleanedInterest }),
+    });
+    if (!res.ok) {
+      const j = await res.json().catch(() => ({}));
+      return { ok: false, error: j.detail || 'Server error' };
+    }
+    const j = await res.json();
+    return { ok: true, already: false, item: j.item };
+  } catch (e) {
+    // fallback to localStorage mock
+    const list = getEarlyAccessList();
+    const already = list.find((x) => x.email === cleanedEmail);
+    if (already) {
+      return { ok: true, already: true, item: already, metrics: getMetrics() };
+    }
+
+    const item = {
+      id: crypto?.randomUUID ? crypto.randomUUID() : String(Date.now()),
+      name: cleanedName,
+      email: cleanedEmail,
+      interest: cleanedInterest,
+      createdAt: new Date().toISOString(),
+    };
+
+    writeArray(LS_KEYS.earlyAccess, [item, ...list]);
+    const metrics = bumpEarlyAccessCount();
+
+    return { ok: true, already: false, item, metrics };
   }
-
-  const item = {
-    id: crypto?.randomUUID ? crypto.randomUUID() : String(Date.now()),
-    name: cleanedName,
-    email: cleanedEmail,
-    interest: cleanedInterest,
-    createdAt: new Date().toISOString(),
-  };
-
-  writeArray(LS_KEYS.earlyAccess, [item, ...list]);
-  const metrics = bumpEarlyAccessCount();
-
-  return { ok: true, already: false, item, metrics };
 }
 
 export function getContactMessages() {
   return readArray(LS_KEYS.contact);
 }
 
-export function submitContactMessage({ name, email, message }) {
+export async function submitContactMessage({ name, email, message }) {
   const cleanedEmail = String(email || "").trim().toLowerCase();
   const cleanedName = String(name || "").trim();
   const cleanedMsg = String(message || "").trim();
@@ -119,16 +135,28 @@ export function submitContactMessage({ name, email, message }) {
     return { ok: false, error: "Please enter a message (at least 10 characters)." };
   }
 
-  const item = {
-    id: crypto?.randomUUID ? crypto.randomUUID() : String(Date.now()),
-    name: cleanedName,
-    email: cleanedEmail,
-    message: cleanedMsg,
-    createdAt: new Date().toISOString(),
-  };
-
-  const prev = getContactMessages();
-  writeArray(LS_KEYS.contact, [item, ...prev]);
-
-  return { ok: true, item };
+  try {
+    const res = await fetch('/api/contact-messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name: cleanedName, email: cleanedEmail, message: cleanedMsg }),
+    });
+    if (!res.ok) {
+      const j = await res.json().catch(() => ({}));
+      return { ok: false, error: j.detail || 'Server error' };
+    }
+    const j = await res.json();
+    return { ok: true, item: j.item };
+  } catch (e) {
+    const item = {
+      id: crypto?.randomUUID ? crypto.randomUUID() : String(Date.now()),
+      name: cleanedName,
+      email: cleanedEmail,
+      message: cleanedMsg,
+      createdAt: new Date().toISOString(),
+    };
+    const prev = getContactMessages();
+    writeArray(LS_KEYS.contact, [item, ...prev]);
+    return { ok: true, item };
+  }
 }

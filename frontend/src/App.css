@@ -58,6 +58,22 @@
   max-width: 70ch;
 }
 
+/* Allow specific sections to render manifesto / subtitle text at full width */
+.ryha-p-full {
+  max-width: none;
+}
+
+/* Utility for intentionally wider body text inside cards or sections */
+.ryha-wide {
+  max-width: none;
+}
+
+/* Optional: use a readable wide cap instead of full-bleed
+.ryha-wide {
+  max-width: 1100px;
+}
+*/
+
 /* background + depth */
 .ryha-grid {
   background-image:
