@@ -55,6 +55,12 @@
     -moz-osx-font-smoothing: grayscale;
     @apply bg-background text-foreground;
   }
+
+  ::selection {
+    background: rgba(122, 167, 255, 0.24);
+  }
+}
+
 /* Keep existing debug wrapper behavior */
 @layer base {
   [data-debug-wrapper="true"] {
@@ -86,41 +92,4 @@
     border-top-color: inherit;
     border-bottom-color: inherit;
   }
-}
-
-  ::selection {
-    background: rgba(122, 167, 255, 0.24);
-  }
-}
-
-@layer base {
-    [data-debug-wrapper="true"] {
-        display: contents !important;
-    }
-
-    [data-debug-wrapper="true"] > * {
-        margin-left: inherit;
-        margin-right: inherit;
-        margin-top: inherit;
-        margin-bottom: inherit;
-        padding-left: inherit;
-        padding-right: inherit;
-        padding-top: inherit;
-        padding-bottom: inherit;
-        column-gap: inherit;
-        row-gap: inherit;
-        gap: inherit;
-        border-left-width: inherit;
-        border-right-width: inherit;
-        border-top-width: inherit;
-        border-bottom-width: inherit;
-        border-left-style: inherit;
-        border-right-style: inherit;
-        border-top-style: inherit;
-        border-bottom-style: inherit;
-        border-left-color: inherit;
-        border-right-color: inherit;
-        border-top-color: inherit;
-        border-bottom-color: inherit;
-    }
 }
