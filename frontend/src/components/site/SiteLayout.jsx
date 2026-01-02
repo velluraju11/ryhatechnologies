@@ -107,6 +107,8 @@ function TopNav() {
             <img
               src="/logo.png"
               alt="Ryha Technologies"
+              width="20"
+              height="20"
               className="h-5 w-5 object-contain opacity-90"
             />
           </span>

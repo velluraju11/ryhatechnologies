@@ -3,13 +3,14 @@ import { Helmet } from 'react-helmet-async';
 
 const SEO = ({ title, description, keywords, image, url, type = 'website', schemas = [] }) => {
     const siteTitle = "Ryha Technologies";
-    const defaultDescription = "AI-driven cybersecurity and intelligent system protection. Securing the future with advanced threat detection.";
+    // Shortened default description (< 160 chars)
+    const defaultDescription = "Ryha Technologies builds AI-driven cybersecurity and intelligence systems. Secure, autonomous solutions for digital infrastructure.";
     const siteUrl = "https://ryha.in";
 
     // Prevent duplicate branding if the title already contains the site name
     const metaTitle = title
         ? (title.includes(siteTitle) ? title : `${title} | ${siteTitle}`)
-        : siteTitle;
+        : `${siteTitle} | AI-Driven Cybersecurity`;
 
     const metaDescription = description || defaultDescription;
     const metaUrl = url ? `${siteUrl}${url}` : siteUrl;
@@ -49,7 +50,12 @@ const SEO = ({ title, description, keywords, image, url, type = 'website', schem
                         "@type": "Organization",
                         "name": "Ryha Technologies",
                         "url": siteUrl,
-                        "logo": `${siteUrl}/logo.png`,
+                        "logo": {
+                            "@type": "ImageObject",
+                            "url": `${siteUrl}/logo.png`,
+                            "width": 112,
+                            "height": 112
+                        },
                         "description": defaultDescription,
                         "contactPoint": {
                             "@type": "ContactPoint",

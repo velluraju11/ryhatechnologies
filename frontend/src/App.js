@@ -6,6 +6,7 @@ import SiteLayout from "@/components/site/SiteLayout";
 
 const AdminApp = lazy(() => import("@/admin/AdminApp"));
 import FAQPage from "@/pages/FAQPage";
+import NotFoundPage from "@/pages/NotFoundPage"; // Added NotFoundPage import
 import InternshipPage from "@/pages/InternshipPage"; // Added InternshipPage import
 import CareersPage from "@/pages/CareersPage";
 import {
@@ -60,7 +61,8 @@ function App() {
                   <Route path="/terms" element={<TermsPage />} />
                   <Route path="/legal" element={<LegalDisclosurePage />} />
 
-                  <Route path="*" element={<Navigate to="/" replace />} />
+                  {/* 404 Route */}
+                  <Route path="*" element={<NotFoundPage />} />
                 </Routes>
               </SiteLayout>
             }
