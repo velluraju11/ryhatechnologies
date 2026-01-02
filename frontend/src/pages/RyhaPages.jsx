@@ -36,10 +36,10 @@ function Container({ children, className = "", full = false }) {
   );
 }
 
-function Section({ eyebrow, title, subtitle, children, id, maxWidth = "max-w-3xl", full = false, titleAs = "h2" }) {
+export function Section({ eyebrow, title, subtitle, children, id, maxWidth = "max-w-3xl", full = false, titleAs = "h2", className = "" }) {
   const TitleTag = titleAs;
   return (
-    <section id={id} className="py-16 md:py-20">
+    <section id={id} className={`py-16 md:py-20 ${className}`}>
       <Container full={full}>
         <div className={maxWidth}>
           {eyebrow && (

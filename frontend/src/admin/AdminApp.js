@@ -13,6 +13,9 @@ const InternshipApplicationsPage = lazy(() => import("./pages/InternshipPage"));
 const JobsPage = lazy(() => import("./pages/AdminJobsPage"));
 const JobApplicationsPage = lazy(() => import("./pages/AdminJobApplicationsPage"));
 const JobAlertsPage = lazy(() => import("./pages/AdminJobAlertsPage"));
+const AdminBlogPage = lazy(() => import("./pages/AdminBlogPage"));
+const AdminPostEditor = lazy(() => import("./pages/AdminPostEditor"));
+const AdminCommentsPage = lazy(() => import("./pages/AdminCommentsPage"));
 
 const AdminApp = () => {
     return (
@@ -90,6 +93,40 @@ const AdminApp = () => {
                     element={
                         <Suspense fallback={<div>Loading...</div>}>
                             <JobAlertsPage />
+                        </Suspense>
+                    }
+                />
+
+                {/* Blog Routes */}
+                <Route
+                    path="blog"
+                    element={
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <AdminBlogPage />
+                        </Suspense>
+                    }
+                />
+                <Route
+                    path="blog/new"
+                    element={
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <AdminPostEditor />
+                        </Suspense>
+                    }
+                />
+                <Route
+                    path="blog/edit/:id"
+                    element={
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <AdminPostEditor />
+                        </Suspense>
+                    }
+                />
+                <Route
+                    path="comments"
+                    element={
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <AdminCommentsPage />
                         </Suspense>
                     }
                 />

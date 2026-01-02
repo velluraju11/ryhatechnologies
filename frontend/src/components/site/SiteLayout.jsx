@@ -135,16 +135,16 @@ function TopNav() {
             </NavLink>
           ))}
 
-          <a
-            href="https://blog.ryha.in"
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Ryha Technologies Blog"
-            title="Read our latest updates on the Ryha Blog"
-            className={navLinkBase + " inline-flex items-center gap-1.5"}
+          <NavLink
+            to="/blog"
+            className={({ isActive: active }) =>
+              navLinkBase +
+              " " +
+              (active ? "text-white" : "")
+            }
           >
-            Blog <ExternalLink className="h-4 w-4" role="img" aria-label="External Link" alt="External Link" />
-          </a>
+            Blog
+          </NavLink>
 
           <Button asChild className="ryha-btn-primary">
             <Link to="/#early-access" aria-label="Join Early Access List" title="Join the Early Access List">
@@ -181,16 +181,14 @@ function TopNav() {
                     </NavLink>
                   ))}
 
-                  <a
-                    href="https://blog.ryha.in"
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label="Ryha Technologies Blog"
-                    title="Read our latest updates on the Ryha Blog"
-                    className="text-base text-white/75 inline-flex items-center gap-2"
+                  <NavLink
+                    to="/blog"
+                    className={({ isActive: active }) =>
+                      "text-base " + (active ? "text-white" : "text-white/75")
+                    }
                   >
-                    Blog <ExternalLink className="h-4 w-4" role="img" aria-label="External Link" alt="External Link" />
-                  </a>
+                    Blog
+                  </NavLink>
                 </div>
 
                 <Separator className="bg-white/10" />
@@ -246,7 +244,7 @@ function Footer() {
 
 export default function SiteLayout({ children }) {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen w-full overflow-x-hidden">
       <SiteBackdrop />
       <TopNav />
 

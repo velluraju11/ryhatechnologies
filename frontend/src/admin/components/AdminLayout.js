@@ -114,6 +114,31 @@ export default function AdminLayout() {
                 Internships
             </NavLink>
             <div className="pt-4 pb-2 px-4 text-xs font-semibold text-slate-400 uppercase tracking-wider">
+                Blog
+            </div>
+            <NavLink
+                to="/admin/blog"
+                className={({ isActive }) =>
+                    `flex items-center px-4 py-2.5 text-sm font-medium rounded-md transition-colors ${isActive
+                        ? "bg-slate-900 text-white shadow-sm"
+                        : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"
+                    }`
+                }
+            >
+                Posts
+            </NavLink>
+            <NavLink
+                to="/admin/comments"
+                className={({ isActive }) =>
+                    `flex items-center px-4 py-2.5 text-sm font-medium rounded-md transition-colors ${isActive
+                        ? "bg-slate-900 text-white shadow-sm"
+                        : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"
+                    }`
+                }
+            >
+                Comments
+            </NavLink>
+            <div className="pt-4 pb-2 px-4 text-xs font-semibold text-slate-400 uppercase tracking-wider">
                 Careers
             </div>
             <NavLink

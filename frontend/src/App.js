@@ -5,20 +5,25 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import SiteLayout from "@/components/site/SiteLayout";
 
 const AdminApp = lazy(() => import("@/admin/AdminApp"));
+
+import NotFoundPage from "@/pages/NotFoundPage";
 import FAQPage from "@/pages/FAQPage";
-import NotFoundPage from "@/pages/NotFoundPage"; // Added NotFoundPage import
-import InternshipPage from "@/pages/InternshipPage"; // Added InternshipPage import
+import InternshipPage from "@/pages/InternshipPage";
 import CareersPage from "@/pages/CareersPage";
+import BlogPage from "@/pages/BlogPage";
+import BlogPostPage from "@/pages/BlogPostPage";
+
 import {
+  HomePage,
   AboutPage,
   ContactPage,
-  HomePage,
-  LegalDisclosurePage,
   MissionPage,
-  PrivacyPage,
   ProductsPage,
-  TermsPage,
-} from "@/pages/RyhaPages";
+  LegalDisclosurePage,
+  LegalPage,
+  PrivacyPage,
+  TermsPage
+} from "./pages/RyhaPages";
 
 import { Capacitor } from "@capacitor/core";
 
@@ -56,6 +61,10 @@ function App() {
                   <Route path="/faq" element={<FAQPage />} />
                   <Route path="/internships" element={<InternshipPage />} />
                   <Route path="/careers" element={<CareersPage />} />
+
+                  {/* Blog Routes */}
+                  <Route path="/blog" element={<BlogPage />} />
+                  <Route path="/blog/:slug" element={<BlogPostPage />} />
 
                   <Route path="/privacy" element={<PrivacyPage />} />
                   <Route path="/terms" element={<TermsPage />} />
