@@ -1,85 +1,80 @@
-# Ryha Technologies - Secure Admin Panel & Landing Page
+# Ryha Technologies - Landing Page & Admin Panel
 
-This repository contains the source code for the Ryha Technologies landing page, integrated with a secure internal admin panel.
+Enterprise-grade landing page and secure admin panel for Ryha Technologies, built with React, Tailwind CSS, and Supabase.
 
-## Key Features
-- **Frontend**: React.js with Tailwind CSS, Lucide Icons, and modern UI components.
-- **Backend (Auth & Data)**: Supabase (PostgreSQL, Auth, RLS).
-- **SEO**: Fully optimized with `react-helmet-async`, structured JSON-LD data, and semantic HTML (100/100 Audit Score).
-- **Admin Panel**:
-  - Secure Login (Supabase Auth).
-  - Dashboard with stats.
-  - Management for Early Access Signups and Contact Messages.
-  - Rich Text Editor for Legal/Content pages.
-  - Robust Phone Validation and Duplicate prevention.
+## 🚀 Deployment (Vercel) - Recommended
 
-## Prerequisites
-- Node.js (v16 or higher)
-- NPM
-- A Supabase Project
+This project is optimized for deployment on **Vercel**.
 
-## 1. Setup
+1.  **Push to GitHub**: ensure your latest code is on GitHub.
+2.  **Import to Vercel**:
+    *   Go to [Vercel Dashboard](https://vercel.com/dashboard) -> **Add New...** -> **Project**.
+    *   Import the `ryhain` repository.
+3.  **Configure Project**:
+    *   **Framework Preset**: `Create React App` (should auto-detect).
+    *   **Root Directory**: Click "Edit" and select `frontend`. **(Crucial)**.
+4.  **Environment Variables**:
+    *   Add the following variables in the Vercel "Environment Variables" section:
+        *   `REACT_APP_SUPABASE_URL`
+        *   `REACT_APP_SUPABASE_ANON_KEY`
+5.  **Deploy**: Click **Deploy**.
 
-### Clone and Install
-```bash
-git clone <repository-url>
-cd ryhatechnologies-landing-page/frontend
-npm install
-```
+Your site will be live with automatic HTTPS and global CDN.
 
-### Environment Variables
-Create a `.env` file in the `frontend` directory:
+---
 
+## 🛠 Development
+
+### Prerequisites
+*   Node.js (v18+)
+*   Supabase Account
+
+### Setup
+1.  Navigate to `frontend`:
+    ```bash
+    cd frontend
+    ```
+2.  Install dependencies:
+    ```bash
+    npm install
+    ```
+3.  Start local server:
+    ```bash
+    npm start
+    ```
+
+### Env Variables
+Create a `.env` file in `frontend/`:
 ```env
-REACT_APP_SUPABASE_URL=your_supabase_project_url
+REACT_APP_SUPABASE_URL=your_supabase_url
 REACT_APP_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
 
-### Database Setup (Supabase)
-Run the following SQL scripts in your Supabase SQL Editor:
+## 📚 Features
 
-1.  **`supabase_schema.sql`**: Sets up the main tables (`early_access_signups`, `contact_messages`, `site_content`) and RLS policies.
-2.  **`add_phone_columns.sql`**: Adds phone number columns.
-3.  **`add_unique_constraint.sql`**: Enforces unique constraints on email to prevent duplicates.
+*   **Public Site**:
+    *   High-performance Landing Page.
+    *   Dynamic **FAQ Page** with Accordion & SEO Schema.
+    *   Mission, Products, and Legal pages.
+    *   Fully Responsive & SEO Optimized (100/100).
+*   **Admin Panel** (`/admin`):
+    *   Secure Login (Supabase Auth).
+    *   **Dashboard**: Site overview.
+    *   **Early Access**: Manage signups, export to CSV.
+    *   **Messages**: View and reply to contact form submissions.
+    *   **FAQ Manager**: Add, edit, delete, and reorder public FAQs.
+    *   **Site Content**: CMS for Terms, Privacy, and Legal pages.
 
-## 2. Development
+## 🗄 Database (Supabase)
 
-Run the frontend locally:
+Run the following SQL scripts in your Supabase SQL Editor to set up the backend:
 
-```bash
-cd frontend
-npm start
-```
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1.  `supabase_schema.sql` (Base tables)
+2.  `create_faq_table.sql` (FAQ feature)
+3.  `add_phone_columns.sql` (Phone support)
 
-## 3. SEO Verification
+## 🔍 SEO
 
-The site is optimized for:
-- **Meta Tags**: Title, Description, Open Graph, Twitter Cards.
-- **Accessibility**: All icons and images have valid `alt` text or ARIA labels.
-- **Robots.txt**: Located at `public/robots.txt`.
-- **Sitemap**: Referenced in `robots.txt`.
-
-## 4. Deployment (Netlify)
-
-This project is configured for Netlify.
-
-### Build Settings
-- **Base directory**: `frontend`
-- **Build command**: `npm run build`
-- **Publish directory**: `build`
-
-### Important: Netlify Redirects
-A `_redirects` file has been added to `public/` containing:
-```
-/* /index.html 200
-```
-This ensures React Router works correctly on page refresh (SPA Support).
-
-### Steps
-1.  Connect your repository to Netlify.
-2.  Set the **Base directory** to `frontend`.
-3.  Set **Build command** to `npm run build`.
-4.  Set **Publish directory** to `build`.
-5.  **Environment Variables**: Add `REACT_APP_SUPABASE_URL` and `REACT_APP_SUPABASE_ANON_KEY` in Netlify's "Site configuration > Environment variables".
-6.  Deploy!
+*   Implemented with `react-helmet-async`.
+*   Automatic JSON-LD Schema (`Organization`, `WebPage`, `FAQPage`).
+*   Optimized Meta Tags (Open Graph, Twitter Cards).

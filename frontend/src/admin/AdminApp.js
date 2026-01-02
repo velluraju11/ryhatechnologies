@@ -8,6 +8,7 @@ const DashboardPage = lazy(() => import("./pages/DashboardPage"));
 const EarlyAccessPage = lazy(() => import("./pages/EarlyAccessPage"));
 const ContactMessagesPage = lazy(() => import("./pages/ContactPage"));
 const ContentPage = lazy(() => import("./pages/ContentPage"));
+const FAQPage = lazy(() => import("./pages/FAQPage"));
 
 const AdminApp = () => {
     return (
@@ -45,6 +46,14 @@ const AdminApp = () => {
                     element={
                         <Suspense fallback={<div>Loading...</div>}>
                             <ContentPage />
+                        </Suspense>
+                    }
+                />
+                <Route
+                    path="faq"
+                    element={
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <FAQPage />
                         </Suspense>
                     }
                 />

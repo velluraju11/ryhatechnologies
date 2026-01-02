@@ -85,6 +85,7 @@ function TopNav() {
       { to: "/products", label: "Products" },
       { to: "/about", label: "About" },
       { to: "/contact", label: "Contact" },
+      { to: "/faq", label: "FAQ" },
     ],
     []
   );

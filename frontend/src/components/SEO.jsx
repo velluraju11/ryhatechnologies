@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const SEO = ({ title, description, keywords, image, url, type = 'website' }) => {
+const SEO = ({ title, description, keywords, image, url, type = 'website', schemas = [] }) => {
     const siteTitle = "RYHA TECHNOLOGIES";
     const defaultDescription = "AI-driven cybersecurity and intelligent system protection. Securing the future with advanced threat detection.";
     const siteUrl = "https://ryha.in"; // Assuming this is the domain based on email contact@ryha.in
@@ -65,7 +65,8 @@ const SEO = ({ title, description, keywords, image, url, type = 'website' }) => 
                         "name": metaTitle,
                         "url": metaUrl,
                         "description": metaDescription
-                    }
+                    },
+                    ...(schemas || [])
                 ])}
             </script>
         </Helmet>
