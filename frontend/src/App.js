@@ -19,6 +19,8 @@ import {
   TermsPage,
 } from "@/pages/RyhaPages";
 
+import { Capacitor } from "@capacitor/core";
+
 function App() {
   return (
     <div className="App">
@@ -40,7 +42,12 @@ function App() {
             element={
               <SiteLayout>
                 <Routes>
-                  <Route path="/" element={<HomePage />} />
+                  <Route
+                    path="/"
+                    element={
+                      Capacitor.isNativePlatform() ? <Navigate to="/admin" replace /> : <HomePage />
+                    }
+                  />
                   <Route path="/mission" element={<MissionPage />} />
                   <Route path="/products" element={<ProductsPage />} />
                   <Route path="/about" element={<AboutPage />} />
