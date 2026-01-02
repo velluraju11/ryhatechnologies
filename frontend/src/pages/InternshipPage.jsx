@@ -233,7 +233,7 @@ export default function InternshipPage() {
                                         Purpose: To assess learning discipline, fundamentals, and project execution ability
                                     </li>
                                     <li className="text-white/90 font-medium pt-2">
-                                        Note: An interview will be conducted to evaluate your knowledge level. You will be asked to pay the fee via a link sent to your email ONLY if you get selected.
+                                        Note: An interview will be conducted to assess your knowledge and skills. If you are selected, a payment link will be sent to your registered email address to complete the fee payment. All further details will be shared via email.
                                     </li>
                                 </ul>
 
