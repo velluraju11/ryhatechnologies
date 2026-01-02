@@ -5,7 +5,8 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import SiteLayout from "@/components/site/SiteLayout";
 
 const AdminApp = lazy(() => import("@/admin/AdminApp"));
-import FAQPage from "@/pages/FAQPage"; // Create if not exported from RyhaPages yet, or update RyhaPages to export it. For now direct import.
+import FAQPage from "@/pages/FAQPage";
+import InternshipPage from "@/pages/InternshipPage"; // Added InternshipPage import
 import {
   AboutPage,
   ContactPage,
@@ -45,6 +46,7 @@ function App() {
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/contact" element={<ContactPage />} />
                   <Route path="/faq" element={<FAQPage />} />
+                  <Route path="/internships" element={<InternshipPage />} />
 
                   <Route path="/privacy" element={<PrivacyPage />} />
                   <Route path="/terms" element={<TermsPage />} />

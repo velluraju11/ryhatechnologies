@@ -9,6 +9,7 @@ const EarlyAccessPage = lazy(() => import("./pages/EarlyAccessPage"));
 const ContactMessagesPage = lazy(() => import("./pages/ContactPage"));
 const ContentPage = lazy(() => import("./pages/ContentPage"));
 const FAQPage = lazy(() => import("./pages/FAQPage"));
+const InternshipApplicationsPage = lazy(() => import("./pages/InternshipPage"));
 
 const AdminApp = () => {
     return (
@@ -54,6 +55,14 @@ const AdminApp = () => {
                     element={
                         <Suspense fallback={<div>Loading...</div>}>
                             <FAQPage />
+                        </Suspense>
+                    }
+                />
+                <Route
+                    path="internships"
+                    element={
+                        <Suspense fallback={<div>Loading...</div>}>
+                            <InternshipApplicationsPage />
                         </Suspense>
                     }
                 />

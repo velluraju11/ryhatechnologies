@@ -229,6 +229,9 @@ function Footer() {
             <Link className="text-white/70 hover:text-white transition-colors" to="/legal">
               Legal Disclosure
             </Link>
+            <Link className="text-white/70 hover:text-white transition-colors" to="/internships">
+              Internship Program
+            </Link>
           </div>
         </div>
       </div>
