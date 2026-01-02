@@ -105,7 +105,7 @@ function TopNav() {
           {/* Logo with Frame */}
           <span className="relative grid h-9 w-9 place-items-center rounded-lg border border-white/20 bg-white/10 shadow-[0_0_0_1px_rgba(255,255,255,0.05)] transition-transform duration-300 group-hover:-translate-y-[1px]">
             <img
-              src="/logo.png"
+              src="/logo.webp"
               alt="Ryha Technologies"
               width="20"
               height="20"

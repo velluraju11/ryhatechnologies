@@ -52,7 +52,7 @@ const SEO = ({ title, description, keywords, image, url, type = 'website', schem
                         "url": siteUrl,
                         "logo": {
                             "@type": "ImageObject",
-                            "url": `${siteUrl}/logo.png`,
+                            "url": `${siteUrl}/logo.webp`,
                             "width": 112,
                             "height": 112
                         },
