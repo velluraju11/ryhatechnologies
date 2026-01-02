@@ -21,13 +21,6 @@ import { isValidEmail } from "@/mock"; // Keep helper, remove mock submitters
 import { supabase } from "@/lib/supabaseClient";
 import { toast } from "sonner";
 import SEO from "@/components/SEO";
-// Line 1-20: import React... import { Link }... icons... badge... button... card... input... textarea... accordion... separator... import { getMetrics... } from "@/mock".
-// I don't see "import { toast } from 'sonner'". It might be missing in original file or auto-imported? The snippet shows "toast.error" on line 73.
-// If it was working before, it must have been there. Wait, I viewed lines 1-800.
-// Let me double check if I missed it.
-// Code snippet lines 1-20 don't show it. Maybe strictly inside lines 20-30?
-// Line 20 was the last line of import block usually.
-// I will add `import { toast } from "sonner";` to be safe.
 
 function Container({ children, className = "", full = false }) {
   return (
@@ -301,6 +294,9 @@ function Hero() {
             <p className="mt-6 ryha-lead">
               AI-driven cybersecurity and intelligent system protection.
             </p>
+            <div className="mt-4 inline-block px-3 py-1 bg-white/5 rounded-lg border border-white/10 text-sm text-white/80 font-mono">
+              <span className="text-[var(--ryha-accent)] font-bold">RYHA</span> = <span className="text-white">R</span>esponsive <span className="text-white">Y</span>ielding <span className="text-white">H</span>uman-like <span className="text-white">A</span>I
+            </div>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Button asChild className="ryha-btn-primary">
@@ -375,7 +371,33 @@ function Hero() {
 export function HomePage() {
   return (
     <>
-      <SEO title="AI-Driven Cybersecurity" description="Ryha Technologies is engineering AI-driven systems designed to redefine cybersecurity, intelligence, and digital infrastructure." />
+      <SEO
+        title="Ryha Technologies | AI-Driven Cybersecurity | Responsive Yielding Human-like AI"
+        description="Ryha Technologies (Responsive Yielding Human-like AI) defines the next era of autonomous intelligence. We build secure, adaptive systems that yield human-like understanding with machine-speed execution."
+        keywords="Responsive Yielding Human-like AI, Ryha, AI Full Form, Autonomous Cybersecurity, Artificial Intelligence Definition"
+        schemas={[
+          {
+            "@context": "https://schema.org",
+            "@type": "DefinedTerm",
+            "name": "Responsive Yielding Human-like AI",
+            "termCode": "Ryha",
+            "description": "A type of Artificial Intelligence engineered by Ryha Technologies that prioritizes responsiveness, adaptability (yielding), and human-centric cognition (human-like) within secure digital infrastructures.",
+            "inDefinedTermSet": "AI Terminology"
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [{
+              "@type": "Question",
+              "name": "What does Ryha stand for?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ryha stands for Responsive Yielding Human-like AI. It represents a new paradigm in intelligent systems designed to be secure, adaptive, and aligned with human intent."
+              }
+            }]
+          }
+        ]}
+      />
       <Hero />
 
       <Section
@@ -513,7 +535,7 @@ export function HomePage() {
 export function MissionPage() {
   return (
     <>
-      <SEO title="Mission" description="Ryha Technologies exists to engineer intelligent systems that protect, adapt, and evolve alongside modern digital infrastructure." />
+      <SEO title="Mission | Ryha Technologies" description="Ryha Technologies exists to engineer intelligent systems that protect, adapt, and evolve alongside modern digital infrastructure." />
       <Section
         eyebrow="Mission"
         title="Systems that protect, adapt, and evolve"
@@ -669,7 +691,7 @@ export function ProductsPage() {
 
   return (
     <>
-      <SEO title="Products" description="Ryha Technologies is developing a next-generation intelligence platform designed to redefine how systems, security, and AI interact." />
+      <SEO title="Products | Ryha Technologies" description="Ryha Technologies is developing a next-generation intelligence platform designed to redefine how systems, security, and AI interact." />
       <Section
         eyebrow="Products"
         title="A Powerful AI-Native Operating System is being built."
@@ -761,7 +783,7 @@ export function ProductsPage() {
 export function AboutPage() {
   return (
     <>
-      <SEO title="About" description="Ryha Technologies is a cybersecurity and AI-focused company working at the intersection of intelligence, security, and system automation." />
+      <SEO title="About | Ryha Technologies" description="Ryha Technologies is a cybersecurity and AI-focused company working at the intersection of intelligence, security, and system automation." />
       <Section
         eyebrow="About"
         title="Cybersecurity and AI—built with restraint"

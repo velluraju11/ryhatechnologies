@@ -86,7 +86,7 @@ export default function FAQPage() {
     return (
         <>
             <SEO
-                title="Frequently Asked Questions"
+                title="FAQ | Ryha Technologies"
                 description="Find answers to common questions about Ryha Technologies, our autonomous security systems, and early access program."
                 schemas={[faqSchema]} // Injecting specific schema
             />

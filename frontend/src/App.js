@@ -44,7 +44,6 @@ function App() {
                   <Route path="/mission" element={<MissionPage />} />
                   <Route path="/products" element={<ProductsPage />} />
                   <Route path="/about" element={<AboutPage />} />
-                  <Route path="/about" element={<AboutPage />} />
                   <Route path="/contact" element={<ContactPage />} />
                   <Route path="/faq" element={<FAQPage />} />
                   <Route path="/internships" element={<InternshipPage />} />
@@ -60,9 +59,8 @@ function App() {
             }
           />
         </Routes>
-
       </BrowserRouter>
-    </div >
+    </div>
   );
 }
 

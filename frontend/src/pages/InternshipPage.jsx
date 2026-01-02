@@ -141,7 +141,8 @@ export default function InternshipPage() {
             <>
                 <SEO
                     title="Internship Program | Ryha Technologies"
-                    description="A structured, three-layered pathway into real-world engineering."
+                    description="Join the Ryha Technologies Internship Program. A structured, three-layered pathway into real-world AI and engineering. Apply for Layer 1, 2, or 3."
+                    keywords="Ryha Internship, AI Internship, Engineering Internship, Remote Internship, Layer 1 2 3 Internship, Tech Careers"
                 />
                 <div className="min-h-screen pt-32 pb-20 bg-black text-white">
                     <Container>

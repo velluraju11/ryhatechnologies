@@ -2,14 +2,18 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const SEO = ({ title, description, keywords, image, url, type = 'website', schemas = [] }) => {
-    const siteTitle = "RYHA TECHNOLOGIES";
+    const siteTitle = "Ryha Technologies";
     const defaultDescription = "AI-driven cybersecurity and intelligent system protection. Securing the future with advanced threat detection.";
-    const siteUrl = "https://ryha.in"; // Assuming this is the domain based on email contact@ryha.in
+    const siteUrl = "https://ryha.in";
 
-    const metaTitle = title ? `${title} | ${siteTitle}` : siteTitle;
+    // Prevent duplicate branding if the title already contains the site name
+    const metaTitle = title
+        ? (title.includes(siteTitle) ? title : `${title} | ${siteTitle}`)
+        : siteTitle;
+
     const metaDescription = description || defaultDescription;
     const metaUrl = url ? `${siteUrl}${url}` : siteUrl;
-    const metaImage = image ? `${siteUrl}${image}` : `${siteUrl}/og-image.jpg`; // Default OG image path
+    const metaImage = image ? `${siteUrl}${image}` : `${siteUrl}/og-image.jpg`;
 
     return (
         <Helmet>

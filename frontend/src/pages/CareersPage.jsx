@@ -5,6 +5,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Loader2, Briefcase, MapPin, Globe, ArrowRight, CheckCircle, AlertCircle } from 'lucide-react';
+import SEO from '../components/SEO';
 
 // Local Container
 function Container({ children, className = "", full = false }) {
@@ -146,6 +147,11 @@ export default function CareersPage() {
 
     return (
         <div className="min-h-screen bg-black text-white pt-32 pb-20">
+            <SEO
+                title="Careers | Ryha Technologies"
+                description="Explore career opportunities at Ryha Technologies. Join us in building the future of AI and autonomous cybersecurity systems."
+                keywords="Ryha Careers, AI Jobs, Tech Jobs, Cybersecurity Careers, Remote Jobs, Engineering Roles"
+            />
             <Container>
                 {/* Header */}
                 <div className="text-center mb-16 space-y-4">
