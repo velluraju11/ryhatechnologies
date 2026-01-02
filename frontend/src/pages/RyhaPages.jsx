@@ -798,12 +798,12 @@ export function AboutPage() {
               <CardHeader>
                 <CardTitle className="text-white">Approach</CardTitle>
                 <CardDescription className="text-white/65">
-                  Research-first mindset. Architecture before features.
+                  Research-led development. Architecture before features.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="grid gap-3">
-                  {["Research-first mindset", "Architecture before features", "Quiet development before public reveal"].map(
+                  {["Research-led development", "Architecture before features", "Quiet development before public reveal"].map(
                     (t) => (
                       <div key={t} className="ryha-list-item">
                         <span className="ryha-dot" />
@@ -815,15 +815,13 @@ export function AboutPage() {
               </CardContent>
             </Card>
 
+
             <Card className="ryha-card border-white/10 bg-white/[0.03]">
               <CardHeader>
-                <CardTitle className="text-white">Operating in stealth</CardTitle>
-                <CardDescription className="text-white/65">
-                  Some technologies require focus, patience, and restraint.
-                </CardDescription>
+                <CardTitle className="text-white">Founders</CardTitle>
               </CardHeader>
               <CardContent className="text-sm text-white/70">
-                Ryha reveals innovation only when it is ready.
+                Ryha Technologies was founded by Vellu Raju and Sanjay Rithik, with a shared focus on building secure, intelligence-driven systems designed for long-term impact.
               </CardContent>
             </Card>
           </div>
