@@ -235,6 +235,9 @@ function Footer() {
             <Link className="text-white/70 hover:text-white transition-colors" to="/careers">
               Careers
             </Link>
+            <Link className="text-white/70 hover:text-white transition-colors" to="/contact">
+              Contact Us
+            </Link>
           </div>
         </div>
       </div>
