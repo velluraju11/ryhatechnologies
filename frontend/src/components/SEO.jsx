@@ -4,13 +4,13 @@ import { Helmet } from 'react-helmet-async';
 const SEO = ({ title, description, keywords, image, url, type = 'website', schemas = [] }) => {
     const siteTitle = "Ryha Technologies";
     // Shortened default description (< 160 chars)
-    const defaultDescription = "Ryha Technologies builds AI-driven cybersecurity and intelligence systems. Secure, autonomous solutions for digital infrastructure.";
+    const defaultDescription = "Ryha Technologies is an independent AI-driven cybersecurity and autonomous systems company, building secure digital infrastructure for the future.";
     const siteUrl = "https://ryha.in";
 
     // Prevent duplicate branding if the title already contains the site name
     const metaTitle = title
-        ? (title.includes(siteTitle) ? title : `${title} | ${siteTitle}`)
-        : `${siteTitle} | AI-Driven Cybersecurity`;
+        ? (title.includes(siteTitle) ? title : `${title} | Independent AI-Driven Cybersecurity Company`)
+        : `${siteTitle} | Independent AI-Driven Cybersecurity Company`;
 
     const metaDescription = description || defaultDescription;
     const metaUrl = url ? `${siteUrl}${url}` : siteUrl;
@@ -57,16 +57,15 @@ const SEO = ({ title, description, keywords, image, url, type = 'website', schem
                             "height": 112
                         },
                         "description": defaultDescription,
+                        "foundingDate": "2025-12-08",
                         "contactPoint": {
                             "@type": "ContactPoint",
-                            "telephone": "",
                             "contactType": "customer service",
                             "email": "contact@ryha.in"
                         },
                         "sameAs": [
-                            "https://www.linkedin.com/company/ryha-technologies/",
-                            "https://www.instagram.com/ryha_technologies/",
-                            "https://x.com/Ryha_Tech"
+                            "https://www.linkedin.com/company/ryha-technologies",
+                            "https://github.com/ryha"
                         ]
                     },
                     {

@@ -148,7 +148,7 @@ function TopNav() {
 
           <Button asChild className="ryha-btn-primary">
             <Link to="/#early-access" aria-label="Join Early Access List" title="Join the Early Access List">
-              Join Early Access <ArrowRight className="h-4 w-4" role="img" aria-label="Arrow Right" alt="Arrow Right" />
+              Join Early Access <ArrowRight className="h-4 w-4" role="img" aria-label="Join Ryha Early Access List" alt="Join Ryha Early Access List" />
             </Link>
           </Button>
         </nav>
@@ -195,7 +195,7 @@ function TopNav() {
 
                 <Button asChild className="ryha-btn-primary w-full">
                   <Link to="/#early-access" aria-label="Join Early Access List" title="Join the Early Access List">
-                    Join Early Access <ArrowRight className="h-4 w-4" role="img" aria-label="Arrow Right" alt="Arrow Right" />
+                    Join Early Access <ArrowRight className="h-4 w-4" role="img" aria-label="Join Ryha Early Access List" alt="Join Ryha Early Access List" />
                   </Link>
                 </Button>
               </div>
@@ -217,6 +217,9 @@ function Footer() {
             <div className="mt-1 text-xs text-white/55">
               Calm. Secure. Research-driven.
             </div>
+            <p className="mt-4 text-[10px] text-white/30 max-w-lg leading-relaxed">
+              Ryha Technologies is an independent cybersecurity and AI company and is not affiliated with RHA Technologies or any similarly named organization.
+            </p>
           </div>
 
           <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm">

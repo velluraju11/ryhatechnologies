@@ -287,9 +287,7 @@ function Hero() {
             </div>
 
             <h1 className="ryha-h1">
-              Securing Digital Systems Today.
-              <br />
-              Building the Intelligence of Tomorrow.
+              Ryha Technologies: Securing Digital Systems with Autonomous AI
             </h1>
             <p className="mt-6 ryha-lead">
               AI-driven cybersecurity and intelligent system protection.
@@ -301,12 +299,12 @@ function Hero() {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Button asChild className="ryha-btn-primary">
                 <Link to="/#early-access" aria-label="Join the Early Access List" title="Join the Early Access List">
-                  Join the Early Access List <ArrowRight className="h-4 w-4" role="img" aria-label="Arrow Right" alt="Arrow Right" />
+                  Join the Early Access List <ArrowRight className="h-4 w-4" role="img" aria-label="Join Ryha Early Access List" alt="Join Ryha Early Access List" />
                 </Link>
               </Button>
               <Button asChild variant="outline" className="ryha-btn-outline">
                 <Link to="/mission" aria-label="Explore Our Mission" title="Explore Our Mission and Vision">
-                  Explore Our Mission <ChevronRight className="h-4 w-4" role="img" aria-label="View Mission" alt="View Mission" />
+                  Explore Our Mission <ChevronRight className="h-4 w-4" role="img" aria-label="Read Ryha Mission Statement" alt="Read Ryha Mission Statement" />
                 </Link>
               </Button>
             </div>
@@ -372,9 +370,9 @@ export function HomePage() {
   return (
     <>
       <SEO
-        title="Ryha Technologies | AI-Driven Cybersecurity | Responsive Yielding Human-like AI"
-        description="Ryha Technologies (Responsive Yielding Human-like AI) defines the next era of autonomous intelligence. We build secure, adaptive systems that yield human-like understanding with machine-speed execution."
-        keywords="Responsive Yielding Human-like AI, Ryha, AI Full Form, Autonomous Cybersecurity, Artificial Intelligence Definition"
+        title="Ryha Technologies: AI-Driven Cybersecurity & Autonomous Systems"
+        description="Ryha Technologies is an independent AI-driven cybersecurity and autonomous systems company, building secure digital infrastructure for the future."
+        keywords="Ryha Technologies, Independent AI Cybersecurity, Autonomous Systems, Artificial Intelligence, Digital Infrastructure"
         schemas={[
           {
             "@context": "https://schema.org",
