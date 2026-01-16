@@ -224,59 +224,71 @@ export default function InternshipPage() {
 
                             {/* Layer 1 Details */}
                             <div className="space-y-6 p-8 rounded-2xl bg-white/[0.02] border border-white/10 hover:bg-white/[0.04] transition-colors">
-                                <h2 className="text-3xl font-bold text-white">Layer 1 — Foundation Internship</h2>
-                                <p className="text-xl text-white/80">Entry-Level | Learning + Evaluation</p>
-                                <ul className="space-y-2 text-white/70">
-                                    <li><strong>Mode:</strong> Remote</li>
-                                    <li>Fee: ₹2,499 (one-time)</li>
-                                    <li>Duration: Flexible, milestone-based</li>
-                                    <li>
-                                        Purpose: To assess learning discipline, fundamentals, and project execution ability
-                                    </li>
-                                    <li className="text-white/90 font-medium pt-2">
-                                        Note: An interview will be conducted to assess your knowledge and skills. If you are selected, a payment link will be sent to your registered email address to complete the fee payment. All further details will be shared via email.
-                                    </li>
+                                <h2 className="text-3xl font-bold text-white">Layer 1 — Web Application Penetration Testing with AI</h2>
+                                <p className="text-xl text-white/80">Track: Cybersecurity + AI-Assisted Offensive Security</p>
+
+                                <div className="space-y-4 text-white/70">
+                                    <p className="italic font-medium">"Calm. Secure. Research-Driven."</p>
+                                    <p>
+                                        Ryha Technologies presents a production-oriented cybersecurity internship built around real pentesting workflows, not classroom labs.
+                                        Interns are trained to think like security engineers, not tool operators.
+                                    </p>
+                                </div>
+
+                                <ul className="space-y-2 text-white/70 mt-4 border-l-2 border-white/10 pl-4">
+                                    <li><strong>Mode:</strong> Remote Practical Learning</li>
+                                    <li><strong>Duration:</strong> 45–60 Days</li>
+                                    <li><strong>Fee:</strong> ₹2,499 (one-time)</li>
+                                    <li><strong>Methodology:</strong> Reconnaissance → Enumeration → Testing → Reporting → Disclosure</li>
                                 </ul>
 
-                                <h3 className="text-xl font-semibold mt-6 text-white">Learning Phases</h3>
-                                <div className="space-y-4">
-                                    <div>
-                                        <h4 className="font-medium text-white">🔹 Weeks 1–2 — Foundational Learning</h4>
-                                        <p className="text-sm text-white/60 mt-1">Core concepts, Fundamental tools, workflows. This phase builds strong foundations required for real project work.</p>
+                                <h3 className="text-xl font-semibold mt-8 text-white">Daily Structured Roadmap</h3>
+                                <div className="space-y-6">
+                                    <div className="border-l-2 border-green-500/50 pl-4">
+                                        <h4 className="font-medium text-white">🔹 Day 0 — Program Orientation & Ethics</h4>
+                                        <p className="text-sm text-white/60 mt-1">Professional boundaries, legal authorization, and ethics declaration.</p>
                                     </div>
-                                    <div>
-                                        <h4 className="font-medium text-white">🔹 Weeks 3–4 — Advanced Fundamentals</h4>
-                                        <p className="text-sm text-white/60 mt-1">Advanced fundamentals, Practical application, Structured thinking. Prepares for intermediate-level project execution.</p>
+                                    <div className="border-l-2 border-blue-500/50 pl-4">
+                                        <h4 className="font-medium text-white">🔹 Days 1–7 — Foundations (Web & Network)</h4>
+                                        <p className="text-sm text-white/60 mt-1">HTTP/S, Cookies/Sessions, API fundamentals, Linux basics, TCP/IP, DNS behavior.</p>
+                                    </div>
+                                    <div className="border-l-2 border-purple-500/50 pl-4">
+                                        <h4 className="font-medium text-white">🔹 Days 8–18 — Reconnaissance & Enumeration</h4>
+                                        <p className="text-sm text-white/60 mt-1">Target profiling, Subdomain enumeration, Attack surface mapping, Service discovery.</p>
+                                        <p className="text-xs text-white/40 mt-1">Tools: Nmap, Subfinder, Amass, HTTPX, FFUF.</p>
+                                    </div>
+                                    <div className="border-l-2 border-yellow-500/50 pl-4">
+                                        <h4 className="font-medium text-white">🔹 Project 1 — Guided Security Analysis (Day 19)</h4>
+                                        <p className="text-sm text-white/60 mt-1">Vulnerability fundamentals, Input validation, and Auth flow analysis.</p>
+                                    </div>
+                                    <div className="border-l-2 border-red-500/50 pl-4">
+                                        <h4 className="font-medium text-white">🔹 Days 20–27 — Manual Vulnerability Testing</h4>
+                                        <p className="text-sm text-white/60 mt-1">OWASP Top 10, XSS, SQL Injection, CSRF, Session Management.</p>
+                                    </div>
+                                    <div className="border-l-2 border-indigo-500/50 pl-4">
+                                        <h4 className="font-medium text-white">🔹 Project 2 — AI-Assisted Pentesting (Day 28)</h4>
+                                        <p className="text-sm text-white/60 mt-1">IDOR, Business Logic, AI-Integrated workflow, Automation introduction.</p>
+                                    </div>
+                                    <div className="border-l-2 border-orange-500/50 pl-4">
+                                        <h4 className="font-medium text-white">🔹 Days 30–45 — Automation & Bug Bounty</h4>
+                                        <p className="text-sm text-white/60 mt-1">Python/Bash scripting, Custom automation, Bug bounty platforms (HackerOne, Bugcrowd).</p>
+                                    </div>
+                                    <div className="border-l-2 border-emerald-500/50 pl-4">
+                                        <h4 className="font-medium text-white">🔹 Final Project — Real-World Pentest</h4>
+                                        <p className="text-sm text-white/60 mt-1">Independent pentest case study and mandatory public vulnerability disclosure.</p>
                                     </div>
                                 </div>
 
-                                <h3 className="text-xl font-semibold mt-6 text-white">Project Milestones (Mandatory)</h3>
-                                <div className="grid md:grid-cols-3 gap-4 text-sm">
-                                    <div className="p-4 bg-white/5 rounded-lg border border-white/10">
-                                        <div className="h-3 w-3 rounded-full bg-white mb-2"></div>
-                                        <strong className="block text-white mb-1">Basic Project</strong>
-                                        <span className="text-white/50">End of Week 2. Simple, functional, original.</span>
-                                    </div>
-                                    <div className="p-4 bg-white/5 rounded-lg border border-white/10">
-                                        <div className="h-3 w-3 rounded-full bg-white/80 mb-2"></div>
-                                        <strong className="block text-white mb-1">Intermediate Project</strong>
-                                        <span className="text-white/50">End of Week 4. Deeper logic, structure.</span>
-                                    </div>
-                                    <div className="p-4 bg-white/5 rounded-lg border border-white/10">
-                                        <div className="h-3 w-3 rounded-full bg-white/60 mb-2"></div>
-                                        <strong className="block text-white mb-1">Advanced Project</strong>
-                                        <span className="text-white/50">Post Internship. High-level, original.</span>
-                                    </div>
-                                </div>
-
-                                <div className="bg-white/5 p-4 rounded-lg mt-4 border border-white/10">
-                                    <h4 className="font-semibold text-white mb-2">Completion Outcome</h4>
+                                <div className="bg-white/5 p-5 rounded-lg mt-6 border border-white/10">
+                                    <h4 className="font-semibold text-white mb-2">Certification Requirements</h4>
                                     <ul className="list-disc list-inside text-sm text-white/70 space-y-1">
-                                        <li>Foundation Internship Certificate is issued</li>
-                                        <li>Performance is internally evaluated</li>
-                                        <li>Candidate becomes eligible for Layer 2 selection</li>
+                                        <li>All 3 Project repositories verified</li>
+                                        <li>Public vulnerability report submitted (HackerOne/Bugcrowd/Open)</li>
+                                        <li>Documentation & Ethics compliance verified</li>
                                     </ul>
-                                    <p className="text-xs text-white/40 mt-2">* Completion does not guarantee advancement. Selection is merit-based.</p>
+                                    <p className="text-sm text-white/90 font-medium mt-3">
+                                        Certificate Title: "Layer 1 – Web Application Penetration Testing with AI"
+                                    </p>
                                 </div>
                             </div>
 
@@ -328,9 +340,10 @@ export default function InternshipPage() {
                                 <h3 className="text-xl font-bold text-white mb-4">Important Notes</h3>
                                 <ul className="space-y-2 text-white/70 list-disc list-inside">
                                     <li>This is not a guaranteed job program</li>
-                                    <li>Certificates are issued only after verification</li>
                                     <li>Advancement is earned, not purchased</li>
                                     <li>Every decision is made manually</li>
+                                    <li>Certificates are issued only after verification</li>
+                                    <li>Internship certificate will be shipped once you completed</li>
                                     <li>Ryha Technologies reserves final evaluation authority</li>
                                 </ul>
                             </div>
